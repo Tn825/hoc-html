@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NHAP KHOI</title>
+</head>
+<body>
+   <div class="main">
+      <form action="" method="POST" class="form" id="form-1">
+        <h3 class="heading">Thành viên đăng ký</h3>
+        <p class="desc">Vui lòng điền thông tin</p> 
+
+        <div class="spacer"></div>
+
+        <div class="form-group">
+            <label for="fullname" class="form-label">Tên đầy đủ</label>
+            <input id="fullname" name="fullname" type="text" placeholder="VD: Nhật Phan"></input>
+            <span class="form-message"></span> 
+        </div>
+
+        <div class="form-group">
+            <label for="lop" class="form-label">Lớp</label>
+            <input id="lop" name="lop" type="text" placeholder="VD: 12A6"></input>
+            <span class="form-message"></span> 
+        </div>
+
+        <div class="form-group">
+            <label for="khoi" class="form-label">Khối học</label>
+            <input id="khoi" name="khoi" type="text" placeholder="VD: A00 Toán Lí Hóa"></input>
+            <span class="form-message"></span> 
+        </div>
+
+        <button class="form-submit">Đăng ký</button> 
+      </form>
+   </div>
+
+   <script scr="./main.js"></script>
+   <script>
+
+       Validator({
+         form: '#form-1'
+         rules: [
+            Validator.isRequired('#fullname'),
+            Validator.isLop('#lop'),
+         ]
+       });
+   </script>
+</body>
+</html>
